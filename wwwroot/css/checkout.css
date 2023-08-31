@@ -1,0 +1,389 @@
+/* importing css file for the header and footer of web Page */
+@import url("./styles.css");
+@import url(./main.css);    
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    border-radius: 2em;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 30px;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: ">";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+.login-head,
+.delivery-address-head,
+.order-summary-head {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-head div:first-child i,
+.delivery-address-head div:first-child i,
+.order-summary-head div:first-child i {
+    color: #fd6e00;
+    font-size: 20px;
+}
+
+.login-head div:nth-child(3) button,
+.delivery-address-head div:nth-child(3) button,
+.order-summary-head div:nth-child(3) button {
+    font-weight: bold;
+    color: #ffff;
+    border: 2px solid#fd6e00;
+    background-color: #fd6e00;
+    border-radius: 2em;
+    padding: 4px 10px;
+}
+
+.login-head div:nth-child(3) button:hover,
+.delivery-address-head div:nth-child(3) button:hover,
+.order-summary-head div:nth-child(3) button:hover {
+    color: #fd6e00;
+    background-color: #ffff;
+}
+
+.margin {
+    margin: 20px 0;
+}
+
+.order-summary-body {
+    border: 1px solid #d9d9d9;
+}
+
+.order-summary-body .right-section input,
+.order-summary-body .right-section select {
+    border: 1px solid #d9d9d9;
+}
+
+.order-summary-body .left-section ul {
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.order-summary-body .left-section ul li {
+    padding: 10px;
+    border-left: 0.5em solid #d9d9d9;
+}
+
+.order-summary-body .left-section ul li:hover {
+    color: #000000;
+    box-shadow: -5px 0px 0px 0px #fd6e00;
+    font-weight: bold;
+    border: 1px solid #d9d9d9;
+    border-right: none;
+}
+
+.order-summary-body .right-section .right-section-heading {
+    margin: 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.order-summary-body .right-section .right-section-heading h5 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.order-summary-body .right-section div:nth-child(3) {
+    column-gap: 20px;
+}
+
+.order-summary-body .right-section div:nth-child(3) div:nth-child(2) input {
+    width: 100px;
+}
+
+.order-summary-body .right-section>div {
+    margin: 20px 10px;
+}
+
+.order-summary-body .right-section>div:nth-child(4) {
+    line-height: 30px;
+}
+
+.payment-area a {
+    text-decoration: none;
+}
+
+.payment-area button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffff;
+    background-color: #fd6e00;
+    border: 2px solid #fd6e00;
+    width: 100%;
+    border-radius: 2em;
+}
+
+.payment-area button:hover {
+    color: #fd6e00;
+    background-color: #ffff;
+}
+
+.order-summary-body .right-section>div:nth-child(4) span:nth-child(3) {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00cc00;
+}
+
+.order-summary-body .right-section>div:nth-child(4) span:nth-child(2) {
+    font-size: 12px;
+}
+
+.login-body {
+    border: 1px solid #d9d9d9;
+    font-size: 16px;
+}
+
+.login-body>div button {
+    width: 100%;
+    height: 40px;
+    background: #fd6e00;
+    color: #ffff;
+    font-weight: bold;
+    margin: 20px 0;
+    border: 2px solid #fd6e00;
+    border-radius: 2em;
+}
+
+.login-body>div button:hover {
+    background: #ffff;
+    color: #fd6e00;
+}
+
+.delivery-address-body {
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+}
+
+.delivery-address-body button {
+    width: 100%;
+    height: 40px;
+    background: #fd6e00;
+    color: #ffff;
+    font-weight: bold;
+    margin: 20px 0;
+    border: 2px solid #fd6e00;
+    border-radius: 2em;
+}
+
+.delivery-address-body button:hover {
+    background: #ffff;
+    color: #fd6e00;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    line-height: 40px;
+}
+
+.summary-box .box-head {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.payment-heading {
+    margin: 20px 10px 0;
+}
+
+.payment-heading h5 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.summary-box {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+}
+
+.summary-box .box-body {
+    list-style: 40px;
+}
+
+.summary-box .box-bottom {
+    border-top: 1px solid #d9d9d9;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.color-orange {
+    color: #fd6e00;
+}
+
+@media only screen and (min-width:200px) and (max-width:575px) {
+    .pad-sm-xsm-0 {
+        padding: 0 !important;
+    }
+
+    .payment-heading {
+        margin: 10px 0;
+    }
+
+    .profile-breadcrumb ol {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .payment-heading h5 {
+        font-size: 20px;
+    }
+
+    .margin {
+        margin: 15px 0;
+    }
+
+    .login-head,
+    .delivery-address-head,
+    .order-summary-head {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .login-head>div,
+    .delivery-address-head>div,
+    .order-summary-head>div {
+        margin-bottom: 5px;
+    }
+
+    .login-head div:nth-child(3) button,
+    .delivery-address-head div:nth-child(3) button,
+    .order-summary-head div:nth-child(3) button {
+        border-radius: 3px;
+        padding: 2px 5px;
+    }
+
+    .login-body {
+        font-size: 14px;
+    }
+
+    .login-body input {
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .login-body>div button {
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    .delivery-address-body {
+        font-size: 14px;
+    }
+
+    .delivery-address-body input,
+    .delivery-address-body select option,
+    .delivery-address-body select {
+        font-size: 14px;
+        height: 30px;
+
+    }
+
+    .delivery-address-body button {
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    .order-summary-body .left-section ul {
+        font-size: 14px;
+    }
+
+
+    .login-head div:first-child i,
+    .delivery-address-head div:first-child i,
+    .order-summary-head div:first-child i {
+        font-size: 16px;
+    }
+
+    .order-summary-body .right-section .right-section-heading h5 {
+        font-size: 16px;
+    }
+
+    .order-summary-body .right-section>div {
+        margin: 10px 4px;
+    }
+
+    .order-summary-body .right-section .right-section-heading {
+        margin: 10px 10px;
+    }
+
+    .right-section label,
+    .right-section input,
+    .right-section select,
+    .right-section option {
+        font-size: 14px;
+    }
+
+    .order-summary-body .right-section>div:nth-child(4) button {
+        font-size: 14px;
+    }
+
+    .order-summary-body .right-section>div:nth-child(4) span:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .order-summary-body .right-section>div:nth-child(4) {
+        line-height: 25px;
+    }
+
+    .summary-box .box-head {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .summary-box {
+        padding: 10px;
+    }
+
+    .grid-container {
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    .summary-box .box-bottom {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}

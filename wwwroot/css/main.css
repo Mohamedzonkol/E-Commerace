@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap");
+@import url(./my_carts.css);
+
+* {
+    border-radius: 3em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+:root {
+    --lg-font: "Kaisei Tokumin", serif;
+    --sm-font: "Poppins", sans-serif;
+    --pink: #e5345b;
+}
+
+body {
+    font-family: var(--sm-font);
+}
+
+/* button */
+.bg-primary {
+    background-color: var(--pink) !important;
+}
+
+.btn:not(.nav-btns button) {
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn:not(.nav-btns button):hover {
+    background-color: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+}
+
+/* text color */
+.text-primary {
+    color: var(--pink) !important;
+}
+
+/* navbar */
+.navbar {
+    -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 550;
+}
+
+.navbar-brand img {
+    width: 30px;
+}
+
+.navbar-brand span {
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+    transition: box-shadow var(--duration-default) ease-in-out;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    color: var(--pink) !important;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+.nav-item {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+/* _____SIGN-IN MODAL_____ */
+
+.modal-content {
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(255, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(255, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 255, 119, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(255, 158, 141, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn-signin {
+    font-size: 1vw;
+    font-weight: 500;
+    background: var(--pink);
+    width: 8em;
+    height: 3em;
+    border-radius: 1.5em;
+    color: #ffffff;
+    border: 0.2em solid var(--pink);
+    padding: unset;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn-signin:hover {
+    background-color: #ffffff;
+    color: var(--pink);
+}
+
+/* this style sheet is used for header element of sign in modal */
+.modal.show {
+    padding-right: 0 !important;
+    border-radius: 2em;
+}
+
+.modal-header img {
+    width: 30em;
+    border-radius: 2em;
+}
+
+/* this style sheet is used for body element of sign in modal */
+.body-pills {
+    margin-bottom: 1.5em;
+}
+
+.login-pill,
+.create-account-pill {
+    width: 50%;
+    height: 2.5rem;
+    color: black;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.body-pills a:hover {
+    color: pink;
+}
+
+.body-pills .active {
+    color: #000000 !important;
+    background-color: #d1d1d1 !important;
+    border-radius: 3em;
+}
+
+.input-group-text {
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.input-password {
+    margin-bottom: 1.5rem;
+}
+
+.important {
+    color: #fd6e00;
+}
+
+.form-control {
+    border-radius: 3em;
+}
+
+.sign-in-btn {
+    width: 100%;
+    border: 1px solid #fd6e00;
+    background-color: #fd6e00;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sign-in-btn:hover {
+    background-color: #ffffff;
+    color: #fd6e00;
+}
+
+.FYP-btn {
+    width: 100%;
+    border: 1px solid #fd6e00;
+    color: gray;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.FYP-btn:hover {
+    color: black;
+    background-color: rgb(220, 220, 220);
+}
+
+.create-account-btn-body {
+    width: 100%;
+    border: 1px solid #fd6e00;
+    background-color: #fd6e00;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.create-account-btn-body:hover {
+    background-color: #ffffff;
+    color: #fd6e00;
+}
+
+/* this style sheet element is used for footer element */
+.footer-btn-group {
+    width: 100%;
+}
+
+.modal-footer span {
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: #ffffff;
+    font-weight: bold;
+    width: 30%;
+    font-size: 1rem;
+}
+
+.twitter-btn {
+    background-color: #55acee;
+    color: #ffffff;
+    font-weight: bold;
+    width: 30%;
+    font-size: 1rem;
+}
+
+.google-btn {
+    background-color: #dd4b39;
+    color: #ffffff;
+    font-weight: bold;
+    width: 30%;
+    font-size: 1rem;
+}
+
+.footer-btn-group i {
+    letter-spacing: 0.2rem;
+}
+
+/* The @media screen rule is used in media queries to apply different styles for different media types/devices. */
+/* this query really means, is “If device minimum width is 200px to maximum width is 550px, then do {…}” */
+@media only screen and (min-width: 200px) and (max-width: 550px) {
+    .modal-header img {
+        width: 28vw;
+    }
+
+    .sign-in-btn,
+    .create-account-btn-body {
+        font-size: 3vw;
+    }
+
+    .login-pill,
+    .create-account-pill {
+        align-items: center;
+        font-size: 3vw;
+    }
+
+    .tab-pane label,
+    .tab-pane input {
+        font-size: 3vw !important;
+    }
+
+    .tab-pane input,
+    .input-password div {
+        height: 40px;
+    }
+
+    .modal-footer span {
+        font-size: 2.5vw;
+    }
+
+    .footer-btn-group button,
+    .FYP-btn {
+        font-size: 2.5vw;
+    }
+}
+
+/*___________________modal sign-in end___________________ */
+
+/* header */
+#header {
+    background: url(../images/banner-img-1.jpg) top/cover no-repeat;
+}
+
+.carousel-inner h1 {
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+
+.carousel-item .btn {
+    border-color: #fff !important;
+}
+
+.carousel-item .btn:hover {
+    border-color: var(--pink) !important;
+}
+
+/* title */
+.title h2::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--pink);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* collection */
+.active-filter-btn {
+    background-color: var(--pink) !important;
+    color: #fff !important;
+    border-color: var(--pink) !important;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.filter-button-group .btn:hover {
+    color: #fff !important;
+}
+
+.collection-img span {
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    /* transition: all 0.3s ease; */
+}
+
+.collection-img:hover img {
+    transform: scale(1.2);
+}
+
+/* special */
+.special-img span {
+    top: 20px;
+    right: 20px;
+}
+
+.special-list .btn {
+    padding: 8px 20px !important;
+}
+
+.special-img img {
+    transition: all 0.3s ease;
+}
+
+.special-img:hover img {
+    transform: scale(1.2);
+}
+
+/* offers */
+#offers {
+    background: url(../images/offer_img.jpg) center/cover no-repeat;
+    transition: all 0.3s ease;
+}
+
+#offers.row {
+    min-height: 60vh;
+    transition: all 0.3s ease;
+}
+
+.offers-content {
+    font-size: 28px;
+}
+
+.offers-content h2 {
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+
+.offers-content .btn {
+    border-color: transparent !important;
+}
+
+/* about */
+#about {
+    background-color: rgba(179, 179, 179, 179, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* newsletter */
+#newsletter {
+    background-color: rgba(179, 179, 179, 179, 0.05);
+}
+
+#newsletter p {
+    max-width: 600px;
+}
+
+#newsletter .input-group {
+    max-width: 500px;
+}
+
+#newsletter .form-control {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 3em;
+}
+
+#newsletter .btn {
+    background-color: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+}
+
+#newsletter .btn:hover {
+    background-color: #000;
+    border-color: #000;
+}
+
+/* footer */
+footer .brand {
+    font-family: var(--pink);
+    letter-spacing: 2px;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+footer a:hover {
+    color: var(--pink) !important;
+    transition: box-shadow var(--duration-default) ease-in-out;
+}
+
+/* blue button on bottom to reach the top again using JavaScript*/
+.scroll-top-btn {
+    background-color: #0099cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    right: 25px;
+    bottom: 35px;
+    color: #ffffff;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    border: 2px solid #0099cc;
+    padding: 1px;
+}
+
+.scroll-top-btn:hover {
+    box-shadow: 0px 0px 17px 0px var(--pink);
+}
+
+/* submenu style sheet when hover into header bottom navigation */
+.submenu {
+    list-style: none;
+    padding: 0 0.5vw;
+    display: none;
+    border-top: 0.3em solid #fd6e00;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 100;
+    width: 10%;
+    box-shadow: 0px 0px 20px -8px #fd6e00;
+    transition: ease 0.5s;
+    border-radius: 1.7em;
+}
+
+.submenu li a {
+    display: block;
+    font-size: 14px;
+}
+
+.submenu li {
+    margin-bottom: 0.5vw;
+}
+
+.headernav-menu:hover+.submenu,
+.submenu:hover {
+    display: block;
+}
+
+.submenu a:hover {
+    color: #fd6e00;
+    text-decoration: none;
+}
+
+/*______________________________________________________ */
+
+/* media queries */
+@media (min-width: 992px) {
+    .nav-item {
+        border-bottom: none;
+    }
+}

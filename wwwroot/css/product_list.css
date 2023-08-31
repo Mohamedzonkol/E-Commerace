@@ -1,0 +1,498 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+@import url(./main.css);
+@import url(./product_list.css);
+@import url(./product_view.css);
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+    margin: 30px;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: ">";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+.row {
+    margin: 0;
+}
+
+.left-section {
+    padding-left: 40px;
+    margin: 40px 0;
+}
+
+.left-section h6 {
+    margin: 10px 0;
+}
+
+.categories,
+.brand,
+.price,
+.discount {
+    margin: 30px 0;
+    border-radius: 2em;
+}
+
+.categories ul,
+.brand ul,
+.price ul,
+.discount ul {
+    list-style: none;
+    padding: 0;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 2em;
+}
+
+.left-section input,
+.left-section label {
+    cursor: pointer;
+}
+
+.left-section li {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.left-section label {
+    margin: 0;
+}
+
+/* _______This style sheet is used for checkbox button which is palced in left section of page_______ */
+.left-section input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section input[type="checkbox"]:after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffff;
+    display: none;
+}
+
+.left-section input[type="checkbox"]:hover {
+    border: 2px solid #fd6e00;
+}
+
+.left-section input[type="checkbox"]:checked {
+    background-color: #fd6e00;
+    border: none;
+}
+
+.left-section input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+/* _________End of checkbox button__________ */
+
+/* _____This style sheet is used for radio button which is in left section of page_____*/
+.left-section input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    border: 1px solid #808080;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section input[type="radio"]:after {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    color: #fd6e00;
+    display: none;
+}
+
+.left-section input[type="radio"]:hover {
+    border: 2px solid #fd6e00;
+}
+
+.left-section input[type="radio"]:checked {
+    border: 2px solid #fd6e00;
+}
+
+.left-section input[type="radio"]:checked:after {
+    display: block;
+}
+
+/* _________End of radio button_________ */
+
+/* _____this style sheet is used for image card_____ */
+.card img {
+    height: 270px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 2em;
+}
+
+.card-box {
+    padding: 10px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+.card-body h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 2em;
+}
+
+.product-cost {
+    font-size: 16px;
+}
+
+.product-cost span:first-child {
+    font-weight: bold;
+}
+
+.product-cost span:nth-child(2) {
+    text-decoration: line-through;
+}
+
+.product-cost span:nth-child(3) {
+    font-weight: bold;
+    color: #fd6e00;
+}
+
+.ratings ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    column-gap: 5px;
+    font-size: 18px;
+    color: #ffcc33;
+    margin: 0;
+}
+
+/* ________End of image card________ */
+
+.sorted-by select {
+    border: 1px solid;
+}
+
+.all-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-products div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.all-products div:first-child h6 {
+    margin: 0;
+}
+
+.all-products {
+    margin: 40px 0;
+}
+
+.left-section h6,
+.all-products h6,
+.product-showing h6 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Same font sizes for different element */
+.profile-breadcrumb,
+.card-box h6,
+.product-cost,
+.all-products div:first-child span,
+.all-products div:nth-child(2) select {
+    font-size: 14px;
+}
+
+.product-showing {
+    color: #fd6e00;
+    margin: 30px 0 40px;
+    border-radius: 2em;
+}
+
+.right-section {
+    margin-bottom: 80px;
+}
+
+.product-view {
+    position: absolute;
+}
+
+.product-view img {
+    width: 70px;
+    height: 70px;
+    background: none;
+    border-radius: 2em;
+}
+
+.product-view .col-4 {
+    padding: 0;
+}
+
+/* this will active through Javascript */
+.blur {
+    opacity: 0.4;
+}
+
+.hide {
+    opacity: 0;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1060px) {
+    .pad-left-right-5 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* this media query really means, is “If device minimum width is 576px to maximum width is 767px, then do {…}” */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .left-section {
+        padding-left: 0;
+    }
+
+    .all-products {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .card {
+        width: 270px;
+    }
+
+    .product-showing {
+        margin: 20px 0 30px;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        border-radius: 2em;
+    }
+}
+
+/* this media query really means, is “If device minimum width is 200px to maximum width is 575px, then do {…}” */
+@media only screen and (min-width: 200px) and (max-width: 575px) {
+    .profile-breadcrumb ol {
+        padding: 10px 5px;
+    }
+
+    .profile-breadcrumb,
+    .card-box h6,
+    .product-cost,
+    .all-products div:first-child span,
+    .all-products div:nth-child(2) select {
+        font-size: 12px;
+    }
+
+    .left-section {
+        padding-left: 0;
+        margin: 20px 0;
+    }
+
+    .categories ul,
+    .brand ul,
+    .price ul,
+    .discount ul {
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    /* ______this style sheet is used checkbox button_____ */
+    .left-section input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        border-radius: 2px;
+    }
+
+    .left-section input[type="checkbox"]:after {
+        font-size: 10px;
+    }
+
+    /* ______________End of checkbox button_______________ */
+
+    /* _______This style sheet is used for radio button_______ */
+
+    .left-section input[type="radio"] {
+        height: 15px;
+        width: 15px;
+    }
+
+    .left-section input[type="radio"]:after {
+        font-size: 8px;
+    }
+
+    /* ________End of radio button__________ */
+
+    .all-products {
+        flex-direction: column;
+        row-gap: 10px;
+        border-radius: 2em;
+    }
+
+    .all-products {
+        margin: 20px 0;
+        border-radius: 2em;
+    }
+
+    .left-section h6,
+    .all-products h6,
+    .product-showing h6 {
+        font-size: 12px;
+    }
+
+    .pad-sm {
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 2em;
+    }
+
+    .pad-sm-card {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 10px !important;
+        border-radius: 2em;
+    }
+
+    .card {
+        width: 180px;
+        border-radius: 2em;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        border-radius: 2em;
+    }
+
+    .card img {
+        height: 170px;
+    }
+
+    .card-box {
+        padding: 0;
+        line-height: 15px;
+        border-radius: 2em;
+    }
+
+    .ratings ul {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .right-section .mb-4 {
+        margin-bottom: 0 !important;
+    }
+
+    .product-showing {
+        margin: 10px 0 20px;
+    }
+
+    .container-xl {
+        padding: 0;
+        border-radius: 2em;
+    }
+
+    .card-box h6,
+    .product-cost {
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    .right-section {
+        margin-bottom: 40px;
+    }
+
+    .product-view img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pad-sm-10 {
+        padding: 10px;
+    }
+}
+
+/* blue button on bottom to reach the top again using JavaScript*/
+.scroll-top-btn {
+    background-color: #0099cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    right: 25px;
+    bottom: 35px;
+    color: #ffffff;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    border: 2px solid #0099cc;
+    padding: 1px;
+}
+
+.scroll-top-btn:hover {
+    box-shadow: 0px 0px 17px 0px var(--pink);
+}

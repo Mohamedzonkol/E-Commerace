@@ -1,0 +1,1147 @@
+/* importing css file for the header and footer of web Page */
+@import url("./style.css");
+@import url(./main.css);
+@import url(./product_list.css);
+@import url(./product_view.css);
+
+/* This is the  universal selector and its apply to all the elements */
+* {
+    margin: 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* This style sheet is used for top section of product view */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #ffee;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+/* This style sheet is used for breadcrumb navigation */
+.profile-breadcrumb {
+    background-color: #e9ecef;
+    border-radius: 2em;
+    margin: 25px;
+}
+
+.profile-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.profile-breadcrumb li:nth-child(2)::before {
+    padding: 5px;
+    content: ">";
+}
+
+.profile-breadcrumb ol li,
+.profile-breadcrumb ol li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-breadcrumb ol li:nth-child(2) a {
+    font-weight: bold;
+}
+
+/* _______end of breadcrumb navigation________ */
+
+.product-views img {
+    width: 75px;
+    border: 1px solid #e4e4e4;
+    background-color: #f5f5f5;
+}
+
+.product-views img:hover {
+    opacity: 0.5;
+    border: 1px solid #e4e4e4;
+}
+
+.product-views {
+    row-gap: 10px;
+}
+
+.focused-product {
+    margin: 0 20px;
+}
+
+.focused-product img {
+    width: 400px;
+    border: 1px solid #e4e4e4;
+    background-color: #f5f5f5;
+}
+
+.product-view-rating span:first-child {
+    color: #ffcc33;
+    font-size: 20px;
+}
+
+.product-view-rating li {
+    list-style: none;
+    display: inline-block;
+    padding: 1px;
+}
+
+.product-view-rating ul {
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+}
+
+.product-view-rating span:first-child:hover ul {
+    font-size: 25px;
+}
+
+.product-view-rating span:nth-child(3) {
+    color: #bfbfbf;
+    font-weight: normal;
+}
+
+.product-view-rating span {
+    color: #00cc00;
+    font-weight: bold;
+    padding: 0px 2px;
+}
+
+.product-discount-off p {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.product-discount-off p span:first-child {
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.product-discount-off span:nth-child(2) {
+    color: #fd6e00;
+}
+
+.size-number {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.size-number div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 50%;
+    border: 1px solid #8c8c8c;
+    height: 10px;
+    width: 10px;
+    font-weight: bold;
+}
+
+.size-number div:hover {
+    color: #fd6e00;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #fd6e00;
+}
+
+.product-quantity span {
+    padding: 20px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #000000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+.product-quantity span:first-child {
+    border-top-left-radius: 5em;
+    border-bottom-left-radius: 5em;
+}
+
+.product-quantity span:nth-child(3) {
+    border-top-right-radius: 5em;
+    border-bottom-right-radius: 5em;
+}
+
+.product-quantity span:first-child:hover,
+.product-quantity span:nth-child(3):hover {
+    font-weight: bold;
+    color: #fd6e00;
+    border: 2px solid #fd6e00;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 2em;
+}
+
+.product-btn-group button {
+    width: 100px;
+    height: 50px;
+    color: #fd6e00;
+    font-weight: bold;
+}
+
+.product-btn-group div img {
+    width: 70px;
+}
+
+.product-btn-group div img:nth-child(2) {
+    position: absolute;
+    opacity: 0;
+}
+
+.product-btn-group div img:nth-child(2):hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.product-btn-group {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* this style sheet is used for button to add to card and buy now */
+.product-btn-group button {
+    width: 200px;
+    height: 50px;
+    background-color: #fd6e00;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #fd6e00;
+    border-radius: 5em;
+}
+
+.product-btn-group button:hover {
+    color: #fd6e00;
+    background-color: #ffffff;
+}
+
+.share-socialmedia span {
+    margin-right: 10px;
+}
+
+.share-socialmedia img {
+    margin-right: 5px;
+}
+
+.product-delivery-support {
+    column-gap: 50px;
+}
+
+/* this is samne font-weight for different elements*/
+.product-delivery-support span,
+.share-socialmedia span,
+.product-size-quantity h6,
+.product-description h6,
+.product-name-rating h5,
+.customer-review h5,
+.customer-review span,
+.product-review-button h5,
+.user-profile span,
+.user-rating div span:nth-child(2) {
+    font-weight: bold;
+}
+
+/* this same margin for different element */
+.product-discount-off,
+.share-socialmedia,
+.product-delivery-support {
+    margin: 15px 0;
+}
+
+.product-description,
+.product-size-quantity,
+.product-btn-group,
+.product-about,
+.customer-review {
+    margin: 20px 0;
+}
+
+.product-about a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.product-about a.active {
+    border-bottom: 2px solid #fd6e00;
+}
+
+.product-about-content h6 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.customer-review div i {
+    color: #ffcc33;
+    font-size: 20px;
+}
+
+.progress {
+    width: 200px;
+    margin: auto;
+    border-radius: 3em;
+}
+
+.customer-review-progress {
+    display: grid;
+    grid-template-columns: 50px 220px 50px;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    font-weight: 500;
+}
+
+/* This style sheet is used for same color to different element */
+.customer-review-progress span:first-child,
+.customer-review-progress span:nth-child(3),
+.customer-review-progress span:nth-child(13),
+.customer-review-progress span:nth-child(15) {
+    color: #0086b3;
+}
+
+.product-review-button {
+    margin: 50px 0;
+}
+
+.product-review-button button {
+    background-color: #fd6e00;
+    color: #ffffff;
+    font-weight: bold;
+    width: 300px;
+    height: 40px;
+    border: 2px solid #fd6e00;
+    border-radius: 5em;
+    margin: 15px 0;
+}
+
+.product-review-button button:hover {
+    background-color: #ffffff;
+    color: #fd6e00;
+}
+
+.customer-review span {
+    margin: 0 10px;
+}
+
+/* The same fontsize for different element */
+.product-description p,
+.product-about-content p,
+.product-view-rating span:nth-child(2),
+.product-view-rating span:nth-child(4),
+.customer-review-progress-container span,
+.user-review,
+.profile-breadcrumb {
+    font-size: 14px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 15px;
+}
+
+.user-profile div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a6a6a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile div i {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.user-rating {
+    line-height: 25px;
+}
+
+.user-rating div span i {
+    color: #ffcc33;
+    font-size: 17px;
+}
+
+.user-helpful-comment-report {
+    margin: 10px 0;
+}
+
+.user-rating span:nth-child(3) {
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.user-helpful-comment-report button {
+    color: #ffffff;
+    background-color: #fd6e00;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #fd6e00;
+    border-radius: 4em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-helpful-comment-report button:hover {
+    color: #fd6e00;
+    background-color: #ffffff;
+}
+
+.user-helpful-comment-report span {
+    padding: 10px;
+}
+
+.user-helpful-comment-report a {
+    text-decoration: none;
+}
+
+.user-review {
+    margin: 20px 0 50px;
+}
+
+.related-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.related-products div {
+    width: 22%;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.listing-product-name,
+.listing-product-cost span:first-child,
+.listing-product-cost span:nth-child(3) {
+    font-weight: bold;
+}
+
+.listing-product-cost,
+.listing-product-name {
+    font-size: 14px;
+}
+
+.listing-product-cost span:nth-child(3) {
+    color: #fd6e00;
+}
+
+.listing-product-cost span:nth-child(2) {
+    text-decoration: line-through;
+}
+
+/* This style sheet is used for product ratinng star */
+.listing-product-rating li {
+    list-style: none;
+    color: #ffcc33;
+}
+
+.listing-product-rating ul {
+    display: flex;
+    column-gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.card .card-body {
+    padding: 15px;
+    line-height: 24px;
+    border-radius: 2em;
+}
+
+.scrolling-products {
+    overflow: hidden;
+}
+
+.btn-left-right {
+    position: relative;
+    bottom: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* This style sheet is used for when hover on similar products left and right button  */
+.btn-left-right button:first-child:hover {
+    box-shadow: 8px 0px 14px 4px rgba(49, 48, 48, 0.295);
+    font-size: 50px;
+}
+
+.btn-left-right button:nth-child(2):hover {
+    box-shadow: -8px 0px 14px 4px rgba(49, 48, 48, 0.295);
+    font-size: 50px;
+}
+
+.btn-left-right button:first-child {
+    background: none;
+    font-size: 35px;
+    height: 100px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border: none;
+}
+
+.btn-left-right button:nth-child(2) {
+    background: none;
+    font-size: 35px;
+    height: 100px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border: none;
+}
+
+.mt-product-container {
+    margin-top: 70px;
+}
+
+.margin-H-rltd-prdct {
+    margin: 40px 0;
+}
+
+/* this @media screen really means, is “If device minimum width is 933px to maximum width is 1100px, then do {…}” */
+@media only screen and (min-width: 933px) and (max-width: 1100px) {
+
+    .product-name-rating h5,
+    .customer-review h5,
+    .product-about a,
+    .product-review-button h5 {
+        font-size: 18px;
+    }
+
+    .product-description p,
+    .product-about-content p,
+    .product-view-rating span:nth-child(2),
+    .product-view-rating span:nth-child(4),
+    .customer-review-progress-container span,
+    .user-review,
+    .profile-breadcrumb {
+        font-size: 13px;
+    }
+
+    .product-discount-off,
+    .product-description h6,
+    .select-size h6,
+    .product-quantity h6,
+    .product-quantity span,
+    .size-number div,
+    .product-btn-group button,
+    .share-socialmedia span,
+    .product-delivery-support span,
+    .product-about-content h6,
+    .customer-review span,
+    .review-India a,
+    .product-review-button button {
+        font-size: 15px;
+    }
+
+    .focused-product img {
+        width: 350px;
+    }
+
+    .product-view-rating span:first-child:hover ul {
+        font-size: 20px;
+    }
+
+    .product-btn-group button {
+        width: 150px;
+    }
+
+    .product-delivery-support img {
+        width: 40px;
+    }
+
+    .product-delivery-support {
+        column-gap: 10px;
+    }
+
+    .customer-review-container .col-md-4 {
+        max-width: 30%;
+    }
+
+    .customer-review-container .col-md-8 {
+        max-width: 60%;
+    }
+
+    .customer-review-container div:first-child {
+        column-gap: 10%;
+    }
+
+    .customer-review div i,
+    .product-view-rating i {
+        font-size: 17px;
+    }
+
+    .customer-review span {
+        margin: 0px 5px;
+    }
+
+    .customer-review {
+        margin: 10px 0;
+    }
+
+    .listing-product-cost,
+    .listing-product-name {
+        font-size: 12px;
+    }
+}
+
+/* this @media screen really means, is “If device minimum width is 768px to maximum width is 932px, then do {…}” */
+@media only screen and (min-width: 768px) and (max-width: 932px) {
+
+    .customer-review div i,
+    .product-view-rating i {
+        font-size: 16px;
+    }
+
+    .product-discount-off p {
+        margin: 10px 0;
+    }
+
+    .product-view-rating span:first-child:hover ul {
+        font-size: 18px;
+    }
+
+    .product-discount-off,
+    .product-description h6,
+    .select-size h6,
+    .product-quantity h6,
+    .product-quantity span,
+    .size-number div,
+    .product-btn-group button,
+    .share-socialmedia span,
+    .product-delivery-support span,
+    .product-about-content h6,
+    .customer-review span,
+    .review-India a,
+    .product-review-button button {
+        font-size: 14px;
+    }
+
+    .product-name-rating h5,
+    .customer-review h5,
+    .product-about a,
+    .product-review-button h5 {
+        font-size: 17px;
+    }
+
+    .product-description p,
+    .product-about-content p,
+    .product-view-rating span:nth-child(2),
+    .product-view-rating span:nth-child(4),
+    .customer-review-progress-container span,
+    .user-review,
+    .profile-breadcrumb {
+        font-size: 12px;
+    }
+
+    .product-description,
+    .product-size-quantity,
+    .product-btn-group,
+    .product-about,
+    .customer-review {
+        margin: 10px 0;
+    }
+
+    .product-btn-group button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .product-btn-group div img {
+        width: 60px;
+    }
+
+    .product-delivery-support img {
+        width: 35px;
+    }
+
+    .share-socialmedia img {
+        width: 40px;
+    }
+
+    .size-number div {
+        padding: 20px;
+    }
+
+    .product-quantity span {
+        padding: 18px;
+    }
+
+    .product-delivery-support {
+        column-gap: 10px;
+    }
+
+    .customer-review-container .col-md-4 {
+        max-width: 35%;
+    }
+
+    .customer-review-container .col-md-8 {
+        max-width: 60%;
+    }
+
+    .customer-review-container div:first-child {
+        column-gap: 5%;
+    }
+
+    .customer-review-progress {
+        grid-template-columns: 40px 150px 30px;
+    }
+
+    .customer-review span {
+        margin: 0px 5px;
+    }
+
+    .customer-review {
+        margin: 10px 0;
+    }
+
+    .user-rating {
+        line-height: 20px;
+    }
+
+    .user-profile div {
+        width: 45px;
+        height: 45px;
+    }
+
+    .user-profile div i {
+        font-size: 20px;
+    }
+
+    .product-review-button {
+        margin: 35px 0;
+    }
+
+    .listing-product-cost,
+    .listing-product-name {
+        font-size: 12px;
+    }
+}
+
+/* this @media screen really means, is “If device minimum width is 577px to maximum width is 768px, then do {…}” */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .focused-product img {
+        width: 350px;
+    }
+
+    .product-info {
+        margin-top: 40px;
+    }
+
+    .product-view-rating span:first-child:hover ul {
+        font-size: 22px;
+    }
+
+    .product-about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-review-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* this @media screen really means, is “If device minimum width is 200px to maximum width is 576px, then do {…}” */
+@media only screen and (min-width: 200px) and (max-width: 576px) {
+    .pad-sm-xsm-0 {
+        padding: 0;
+    }
+
+    .width-sm-xsm {
+        width: 60px;
+    }
+
+    .focused-product {
+        margin: 0 10px;
+    }
+
+    .profile-breadcrumb ol {
+        padding: 10px 0;
+    }
+
+    .customer-review div i,
+    .product-view-rating i {
+        font-size: 16px;
+    }
+
+    .product-discount-off p {
+        margin: 10px 0;
+    }
+
+    .product-view-rating span:first-child:hover ul {
+        font-size: 18px;
+    }
+
+    .product-discount-off,
+    .product-description h6,
+    .select-size h6,
+    .product-quantity h6,
+    .product-quantity span,
+    .size-number div,
+    .product-btn-group button,
+    .share-socialmedia span,
+    .product-delivery-support span,
+    .product-about-content h6,
+    .customer-review span,
+    .review-India a,
+    .product-review-button button {
+        font-size: 12px;
+    }
+
+    .product-name-rating h5,
+    .customer-review h5,
+    .product-review-button h5 {
+        font-size: 16px;
+    }
+
+    .product-description p,
+    .product-about-content p,
+    .product-view-rating span:nth-child(2),
+    .product-view-rating span:nth-child(4),
+    .customer-review-progress-container span,
+    .user-review,
+    .profile-breadcrumb {
+        font-size: 12px;
+    }
+
+    .customer-review {
+        margin: 10px 0;
+    }
+
+    h5 {
+        margin-bottom: 2px;
+    }
+
+    .product-size-quantity {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: start !important;
+        align-items: start !important;
+    }
+
+    .size-number {
+        column-gap: 5px;
+    }
+
+    .size-number div {
+        padding: 20px;
+    }
+
+    .save-product {
+        position: relative;
+        bottom: 65px;
+        right: 50px;
+        width: 60px;
+    }
+
+    .product-btn-group div img {
+        width: 3.5em;
+    }
+
+    .product-btn-group button {
+        width: 100px;
+        height: 40px;
+    }
+
+    .product-quantity span {
+        padding: 18px;
+    }
+
+    .select-size {
+        margin-bottom: 15px;
+    }
+
+    .product-info {
+        margin-top: 20px;
+    }
+
+    .share-socialmedia img,
+    .product-delivery-support img {
+        width: 40px;
+    }
+
+    .product-discount-off,
+    .share-socialmedia,
+    .product-delivery-support {
+        margin: 15px 0;
+    }
+
+    .product-btn-group {
+        margin: 15px 0;
+        justify-content: unset;
+        column-gap: 3vw;
+    }
+
+    .product-review-button {
+        margin: 30px 0;
+    }
+
+    .user-profile div {
+        width: 45px;
+        height: 45px;
+    }
+
+    .user-profile {
+        margin-bottom: 10px;
+    }
+
+    .user-rating div span i {
+        font-size: 14px;
+    }
+
+    .user-helpful-comment-report button {
+        width: 50px;
+        height: 30px;
+    }
+
+    .user-helpful-comment-report span {
+        padding: 5px;
+    }
+
+    .user-rating {
+        line-height: 20px;
+    }
+
+    .product-about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-about a {
+        font-weight: 500;
+        font-size: 15px;
+        padding: 2px 5px;
+    }
+
+    .customer-review-progress {
+        grid-template-columns: 40px 150px 30px;
+    }
+
+    .btn-left-right {
+        bottom: 300px;
+    }
+
+    .mt-product-container {
+        margin: 0;
+    }
+
+    .margin-H-rltd-prdct {
+        margin: 0;
+    }
+
+    .margin-H-rltd-prdct h1 {
+        font-size: 22px;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .card .card-body {
+        padding: 10px;
+    }
+
+    .listing-product-cost,
+    .listing-product-name {
+        font-size: 12px;
+    }
+}
+
+/* ------------------------ START OF PRODUCT VIEW PAGE CSS ----------------------- */
+
+/* Start of Product view decor */
+
+.breadcrumb li:first-child {
+    margin-left: 3em;
+}
+
+.main-container {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.main-container .right-main-container .stars-group img:hover {
+    cursor: pointer;
+}
+
+.main-container .right-main-container .stars-group img {
+    width: auto;
+    height: 1em;
+}
+
+.main-container .right-main-container .stars-group span {
+    color: lightgray;
+    font-size: 0.9em;
+}
+
+.main-container .right-main-container .pricing .offer {
+    color: #fd6e00;
+}
+
+.main-container .right-main-container .description-text p {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.main-container .right-main-container .select-container {
+    width: 30em;
+    height: auto;
+}
+
+.main-container .right-main-container .select-container .button-group button {
+    border-radius: 50%;
+    font-size: 1.1em;
+    margin-right: 0.3em;
+    background-color: white;
+    color: Black;
+    font-weight: normal;
+    border: 1px solid black;
+}
+
+.main-container .right-main-container .select-container .button-group button:hover {
+    color: #fd6e00;
+    font-weight: bold;
+    background-color: white;
+}
+
+.main-container .right-main-container .buttons-collection {
+    width: 30em;
+    height: auto;
+    margin-top: 2em;
+}
+
+.main-container .right-main-container .buttons-collection .cart-button,
+.main-container .right-main-container .buttons-collection .buynow-button {
+    color: white;
+    font-weight: bold;
+    background-color: #fd6e00;
+    border: none;
+    border-radius: 5em;
+    width: 14vw;
+    height: 3vw;
+}
+
+.main-container .right-main-container .buttons-collection .cart-button:hover,
+.main-container .right-main-container .buttons-collection .buynow-button:hover {
+    background-color: white;
+    color: #fd6e00;
+    font-weight: bold;
+    border: 1px solid #fd6e00;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.main-container .right-main-container .buttons-collection img {
+    width: auto;
+    height: 4em;
+}
+
+.main-container .right-main-container .share-on-social {
+    width: 15em;
+    height: auto;
+}
+
+.right-main-container .share-on-social img {
+    width: auto;
+    height: 2.5em;
+}
+
+.main-container .right-main-container .delivery-support {
+    width: 30em;
+    height: auto;
+}
+
+.main-container .right-main-container .delivery-support span {
+    font-size: 0.8em;
+}
+
+.main-container .right-main-container .delivery-support img {
+    width: auto;
+    height: 4.3em;
+}
+
+/* Tabs decor */
+
+#myReviewTabContent h6 {
+    color: black;
+    font-weight: bold;
+}
+
+#myReviewTabContent .tab-pane p {
+    color: black;
+    font-weight: normal;
+}
+
+#myReviewTab,
+.desc-tabs-content {
+    width: 75vw;
+    margin: 0 auto;
+    border: none;
+    font-size: 0.8em;
+}
+
+.desc-tabs .nav-item .nav-link {
+    color: black;
+    font-weight: 500;
+    border: none;
+}
+
+#myReviewTab .nav-item .nav-link:hover {
+    border-bottom: 4px solid #fd6e00;
+}
+/* blue button on bottom to reach the top again using JavaScript*/
+.scroll-top-btn {
+    background-color: #0099cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    right: 25px;
+    bottom: 35px;
+    color: #ffffff;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    border: 2px solid #0099cc;
+    padding: 1px;
+}
+
+.scroll-top-btn:hover {
+    box-shadow: 0px 0px 17px 0px var(--pink);
+}
