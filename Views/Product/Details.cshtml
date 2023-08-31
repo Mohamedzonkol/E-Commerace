@@ -1,0 +1,106 @@
+﻿@*@model e_commerce.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class = "col-sm-10">
+            <div class="collection-img position-relative overflow-hidden">
+                <a href="./css/product_list.css">
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" alt="Photo" class="w-100" height="250" width="200" />
+                    <span class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                </a>
+            </div>
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Catagory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.ViewBag.catagory   
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Offer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.ViewBag.offer
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Create_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Create_at)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Id  }) |
+    <a asp-action="List">Back to List</a>
+</div>
+*@
+@model Product
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="data:image;base64,@System.Convert.ToBase64String(@Model.Photo)" alt="Photo" width="400" height="300" /></div>
+            <div class="col-md-6">
+
+                <div class="small mb-1">SKU: BST-498</div>
+                <h1 class="display-5 fw-bolder">@Model.Name</h1>
+                <div class="fs-5 mb-5">
+                    <span class="text-decoration-line-through">$@(Model.Price + 50)</span>
+                    <span>$@Model.Price</span>
+                </div>
+                <p class="lead">@Model.Description</p>
+                <div class="d-flex">
+                </div>
+
+                <form asp-action="addToCard" asp-controller="Cart" method="post" enctype="multipart/form-data">
+                    <label>Quantity</label>
+                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" name="quantity" placeholder="Quantity" />
+                    <input type="hidden" name="productId" value="@Model.Id" />
+                    <button type="submit" class="btn btn-dark flex-shrink-0">
+                        Add To Cart
+                    </button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>

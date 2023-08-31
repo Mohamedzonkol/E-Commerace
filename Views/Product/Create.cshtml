@@ -1,0 +1,85 @@
+﻿@model EditProductViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    SelectList catagorys;
+    if (Model != null)
+    {
+        catagorys = new SelectList(ViewBag.cat, "Id", "Name", Model.CatagortId);
+    }
+    else
+    {
+        catagorys = new SelectList(ViewBag.cat, "Id", "Name");
+    }
+    SelectList Offers;
+    if (Model != null)
+    {
+        Offers = new SelectList(ViewBag.offer, "Id", "Name", Model.OfferId);
+    }
+    else
+    {
+        Offers = new SelectList(ViewBag.offer, "Id", "Name");
+    }
+
+}
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label"></label>
+                <input type="file" asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="CatagortId">Catagorts</label>
+                <select asp-for="CatagortId" asp-items="catagorys" class="form-control">
+                    <option>--Catagorys--</option>
+                </select>
+                <span asp-validation-for="CatagortId" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="OfferId" class="control-label">Offers</label>
+                <select asp-for="OfferId" asp-items="Offers" class="form-control">
+                    <option>--Offers--</option>
+                </select>
+                <span asp-validation-for="OfferId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"> </script>
+}

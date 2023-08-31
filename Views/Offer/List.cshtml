@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Offer>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferPersent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Available)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if (item.Name == "Not Spicified")
+                continue;
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfferPersent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Available)
+            </td>
+            <td>
+                    <a class="btn btn-outline-dark mt-auto"  asp-action="Delete" asp-controller="Offer" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-outline-dark mt-auto" asp-action="Edit" asp-controller="Offer" asp-route-id="@item.Id">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@*<script>
+    function ConfirmDelete() {
+        document.getElementById("")
+        var accept = confirm("Are You Sure?");
+        if (accept == false) {
+            event.preventDefault();//pervent go to server
+        }
+    }
+</script>*@
